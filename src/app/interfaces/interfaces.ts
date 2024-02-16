@@ -17,7 +17,16 @@ export interface ProductContextProps {
 
 export interface ProductCardHOCProps {
     ({ children, product }: ProductCardProps): JSX.Element;
-    Title: (Props: ProductTitleProps)       => JSX.Element;
-    Image: (Props: ProductImageProps)       => JSX.Element;
-    Buttons: (Props: ProductButtonsProps)   => JSX.Element;
+    Title: (Props: ProductTitleProps) => JSX.Element;
+    Image: (Props: ProductImageProps) => JSX.Element;
+    Buttons: (Props: ProductButtonsProps) => JSX.Element;
+}
+
+export interface onChangeArgs {
+    product: Product;
+    count: number;
+}
+
+export interface ProductInCar extends Product {
+    count: number;
 }
